@@ -2,3 +2,23 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+.light-theme {
+  @include mat.all-component-themes(mat.define-light-theme((
+    color: mat.define-palette(mat.$indigo-palette),
+    typography: mat.define-typography-config(),
+    density: 0
+  )));
+}
+
+.dark-theme {
+  @include mat.all-component-themes(mat.define-dark-theme((
+    color: mat.define-palette(mat.$deep-purple-palette),
+    typography: mat.define-typography-config(),
+    density: 0
+  )));
+}
