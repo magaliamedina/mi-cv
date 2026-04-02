@@ -26,16 +26,17 @@ export class AppComponent {
   isMobile = false;
   isTablet = false;
 
-  constructor(private breakpoint: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver) {
 
-    this.breakpoint.observe([Breakpoints.Handset])
+  this.breakpointObserver
+    .observe([Breakpoints.Handset])
     .subscribe(result => {
 
       this.isMobile = result.matches;
 
     });
 
-  }
+}
 
   downloadCV() {
     window.open('assets/CV_Magali_Medina.pdf', '_blank');
