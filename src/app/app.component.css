@@ -3,6 +3,21 @@ html, body {
   margin: 0;
 }
 
+.title-with-icon {
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 600;
+
+}
+
+.title-with-icon mat-icon {
+
+  font-size: 22px;
+
+}
 
 mat-sidenav-content {
   overflow: auto;
