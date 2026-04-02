@@ -1,24 +1,127 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-@use '@angular/material' as mat;
-
-@include mat.core();
-
-.light-theme {
-  @include mat.all-component-themes(mat.define-light-theme((
-    color: mat.define-palette(mat.$indigo-palette),
-    typography: mat.define-typography-config(),
-    density: 0
-  )));
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
+
+/* ===== DARK THEME GLOBAL ===== */
+
 .dark-theme {
-  @include mat.all-component-themes(mat.define-dark-theme((
-    color: mat.define-palette(mat.$deep-purple-palette),
-    typography: mat.define-typography-config(),
-    density: 0
-  )));
+
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --text: #ffffff;
+
+  background-color: var(--bg);
+  color: var(--text);
+  
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme p {
+
+  color: white !important;
+
+}
+
+/* BODY */
+
+.dark-theme body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* SIDENAV CONTAINER */
+
+.dark-theme mat-sidenav-container {
+  background-color: var(--bg) !important;
+}
+
+/* CONTENT */
+
+.dark-theme mat-sidenav-content {
+  background-color: var(--bg) !important;
+}
+
+/* SIDEBAR */
+
+.dark-theme mat-sidenav {
+  background-color: var(--bg) !important;
+}
+
+/* CARDS */
+
+.dark-theme mat-card {
+  background-color: var(--surface) !important;
+  color: white !important;
+}
+
+/* TOOLBAR */
+
+.dark-theme mat-toolbar {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+
+/* LIST ITEMS */
+
+.dark-theme .mat-mdc-list-item {
+  color: white !important;
+}
+
+/* SUBHEADERS */
+
+.dark-theme .mat-mdc-subheader {
+  color: #bbbbbb !important;
+}
+
+/* ===== FIX TEXTOS EN DARK MODE ===== */
+
+.dark-theme .mat-mdc-list-item {
+
+  color: white !important;
+
+}
+
+/* TEXTO REAL dentro del list item */
+
+.dark-theme .mdc-list-item__primary-text {
+
+  color: white !important;
+
+}
+
+/* SUBTÍTULOS (Contacto, Skills) */
+
+.dark-theme .mat-mdc-subheader {
+
+  color: #bbbbbb !important;
+
+}
+
+/* ===== BOTONES EN DARK MODE ===== */
+
+.dark-theme .mat-mdc-button {
+
+  color: white !important;
+
+}
+
+.dark-theme .mat-mdc-icon-button {
+
+  color: white !important;
+
+}
+
+.dark-theme .mat-mdc-unelevated-button {
+
+  color: white !important;
+
+}
+
+.dark-theme .mat-mdc-outlined-button {
+
+  color: white !important;
+
 }

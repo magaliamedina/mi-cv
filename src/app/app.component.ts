@@ -1,29 +1,40 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatToolbar } from "@angular/material/toolbar";
 import { MatIcon } from "@angular/material/icon";
-import { MatSidenavContainer, MatSidenav, MatSidenavContent } from "@angular/material/sidenav";
-import { MatCard, MatCardTitle, MatCardContent } from "@angular/material/card";
-import { MatList, MatListItem } from "@angular/material/list";
-import { TranslateService } from '@ngx-translate/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatCardModule } from "@angular/material/card";
+import { MatListModule } from "@angular/material/list";
+import { MatButtonModule } from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatToolbar, MatIcon, MatSidenavContainer, MatSidenav, MatCard, MatCardTitle, MatCardContent, MatList, MatListItem, MatSidenavContent],
+  standalone: true,
+  imports: [
+    MatToolbar,
+    MatIcon,
+    MatSidenavModule,
+    MatCardModule,
+    MatListModule,
+    MatButtonModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'mi-cv';
-  //constructor(private translate: TranslateService) {
-    //this.translate.setDefaultLang('es');
-  //}
 
-  switchLang(lang: string) {
-    //this.translate.use(lang);
+  isMobile = false;
+  isTablet = false;
+
+  constructor(private breakpoint: BreakpointObserver) {
+
+    this.breakpoint.observe([Breakpoints.Handset])
+    .subscribe(result => {
+
+      this.isMobile = result.matches;
+
+    });
+
   }
 
   downloadCV() {
@@ -35,16 +46,17 @@ export class AppComponent {
   }
 
   toggleTheme() {
-    // document.body.classList.toggle('dark-mode');
-    // document.body.classList.toggle('light-mode');
+
     const body = document.body;
-      if (body.classList.contains('dark-theme')) {
-        body.classList.remove('dark-theme');
-        body.classList.add('light-theme');
-      } else {
-        body.classList.remove('light-theme');
-        body.classList.add('dark-theme');
-      }
+
+    if (body.classList.contains('dark-theme')) {
+      body.classList.remove('dark-theme');
+      body.classList.add('light-theme');
+    } else {
+      body.classList.remove('light-theme');
+      body.classList.add('dark-theme');
+    }
+
   }
 
 }
