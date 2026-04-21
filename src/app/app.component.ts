@@ -22,7 +22,6 @@ import { MatButtonModule } from "@angular/material/button";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
   isMobile = false;
   isTablet = false;
 
