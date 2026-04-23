@@ -6,6 +6,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { MatButtonModule } from "@angular/material/button";
     MatSidenavModule,
     MatCardModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    TranslateModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -25,7 +27,9 @@ export class AppComponent {
   isMobile = false;
   isTablet = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, protected translate: TranslateService) {
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
 
   this.breakpointObserver
     .observe([Breakpoints.Handset])
@@ -38,7 +42,7 @@ export class AppComponent {
 }
 
   downloadCV() {
-    window.open('assets/CV_Magali_Medina.pdf', '_blank');
+    window.open('assets/CV_Magali_Anabel_Medina.pdf', '_blank');
   }
 
   goToGithub() {

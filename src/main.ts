@@ -11,12 +11,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { importProvidersFrom } from '@angular/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+import { TranslateModule, TranslateLoader, TranslationObject } from '@ngx-translate/core';
 
-export function HttpLoaderFactory() {
-  return new TranslateHttpLoader(); // ✅ solo http
+export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
+  return {
+    getTranslation: (lang: string): Observable<TranslationObject> =>
+      http.get<TranslationObject>(`./assets/i18n/${lang}.json`)
+  };
 }
 
 bootstrapApplication(AppComponent, {
@@ -29,6 +32,7 @@ bootstrapApplication(AppComponent, {
       MatSidenavModule,
       MatListModule,
       MatCardModule,
+      HttpClientModule,
       TranslateModule.forRoot({
         defaultLanguage: 'es',
         loader: {

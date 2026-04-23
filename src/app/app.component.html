@@ -6,9 +6,9 @@
 
   <span class="spacer"></span>
 
-  <button mat-button (click)="downloadCV()">📄 PDF</button>
+  <button mat-button (click)="downloadCV()">{{ 'toolbar.pdfButton' | translate }}</button>
 
-  <button mat-button (click)="goToGithub()">🐙 GitHub</button>
+  <button mat-button (click)="goToGithub()">{{ 'toolbar.githubButton' | translate }}</button>
 
   <button mat-icon-button (click)="toggleTheme()">
     <mat-icon>brightness_6</mat-icon>
@@ -23,17 +23,14 @@
     <!-- SIDEBAR -->
 
     <div class="name-container">
-      <h1>MAGALÍ MEDINA</h1>
-      <h2>Desarrolladora de Software</h2>
+      <h1>{{ 'profile.name' | translate }}</h1>
+      <h2>{{ 'profile.role' | translate }}</h2>
     </div>
 
     <mat-card>
 
       <mat-card-content>
-        <p>
-          Licenciada en Sistemas de Información con más de 4 años de experiencia en desarrollo y mantenimiento de
-          software, especializada en tecnologías .NET, Angular y SQLServer.
-        </p>
+        <p>{{ 'profile.summary' | translate }}</p>
       </mat-card-content>
 
     </mat-card>
@@ -42,20 +39,20 @@
 
     <mat-list>
 
-      <h3 mat-subheader>Contacto</h3>
+      <h3 mat-subheader>{{ 'contact.title' | translate }}</h3>
 
-      <p>📍 Corrientes, Argentina</p>
-      <p>✉️ magalimedina96&#64;gmail.com</p>
-      <p>🌐 github.com/magaliamedina</p>
-      <p>📱 +54 9 3794861591</p>
-      <p>💼 linkedin.com/in/magali-anabel-medina</p>
+      <p>{{ 'contact.location' | translate }}</p>
+      <p>{{ 'contact.email' | translate }}</p>
+      <p>{{ 'contact.github' | translate }}</p>
+      <p>{{ 'contact.phone' | translate }}</p>
+      <p>{{ 'contact.linkedin' | translate }}</p>
 
       <mat-divider></mat-divider>
 
-      <h3 mat-subheader>Idiomas</h3>
+      <h3 mat-subheader>{{ 'languages.title' | translate }}</h3>
 
-      <mat-list-item>Español</mat-list-item>
-      <mat-list-item>Ingles: B1+</mat-list-item>
+      <mat-list-item>{{ 'languages.items.0' | translate }}</mat-list-item>
+      <mat-list-item>{{ 'languages.items.1' | translate }}</mat-list-item>
 
     </mat-list>
 
@@ -66,61 +63,43 @@
     <mat-card>
       <mat-card-title class="title-with-icon">
         <mat-icon>work</mat-icon>
-        Experiencia laboral
+        {{ 'sections.experience.title' | translate }}
       </mat-card-title>
 
       <mat-card-content>
 
-        <h3>
-          <strong>Wirsolut</strong> — Full Stack Developer (Remoto) - Sep 2022 - Feb 2026
-        </h3>
-        <p>· Desarrollo y mantenimiento de aplicaciones web utilizando C#, .NET Framework, .NET Core, Angular y AngularJS.
-        </p>
-        <p>· Desarrollo de soluciones móviles con Ionic/Android e integración con servicios web.</p>
-        <p>· Implementación e integración de servicios mediante APIs REST y SOAP, documentación con Swagger.</p>
-        <p>· Migración de servicios web desde .NET Framework a .NET Core 6/8/10.</p>
-        <p>· Uso de NHibernate como ORM y gestión de datos con SQL Server y PostgreSQL.</p>
-        <p> · Ejecución de code reviews y mejora de calidad del código.</p>
-        <p>· Capacitación y acompañamiento de desarrolladores junior.</p>
-        <p>· Análisis y asignación de tareas en Jira; coordinación de equipo.</p>
-        <p>· Responsable de deployments a preproducción y producción con Jenkins ejecutando pipelines, revisión de
-          larama y resolución de incidentes.</p>
-        <p>Proyecto destacado: Liderazgo en el desarrollo de aplicación móvil Wirpost (Ionic) para el seguimiento de las
-          cargas de los camiones y digitalización de las entregas (remitos).</p>
+        <h3>{{ 'sections.experience.jobs.0.headline' | translate }}</h3>
+        <p>· {{ 'sections.experience.jobs.0.bullets.0' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.1' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.2' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.3' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.4' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.5' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.6' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.7' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.0.bullets.8' | translate }}</p>
+        <p>{{ 'sections.experience.jobs.0.bullets.9' | translate }}</p>
 
         <mat-divider></mat-divider>
 
-        <h3>
-          <strong>Sensei (Schejter y Schejter SA) </strong> — Desarrolladora (Corrientes, Argentina) May 2022 - Sep 2022
-        </h3>
-        <p>· Desarrollo y soporte de sistemas internos.</p>
-        <p>· Consultas y mantenimiento de base de datos en SQL Server.</p>
-        <p> · Análisis funcional y técnico de requerimientos.</p>
+        <h3>{{ 'sections.experience.jobs.1.headline' | translate }}</h3>
+        <p>· {{ 'sections.experience.jobs.1.bullets.0' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.1.bullets.1' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.1.bullets.2' | translate }}</p>
 
         <mat-divider></mat-divider>
 
-        <h3>
-          <strong>Contaduría General de la Provincia de Corrientes</strong> — Desarrolladora Java - Pasante (Corrientes,
-          Argentina) Jun 2021 - May 2022
-        </h3>
-        <p>· Desarrollo y mantenimiento de sistemas utilizando Java y PL/SQL (Oracle).
-        </p>
-        <p>
-          · Diseño y análisis de modelos de datos (DER).
-        </p>
-        <p>· Creación de procedimientos almacenados y optimización de consultas SQL.</p>
-        <p>
-          · Uso de control de versiones con Subversion (SVN).
-        </p>
-        <p>· Desarrollo de módulos de tableros (dashboards) para visualización de información.</p>
+        <h3>{{ 'sections.experience.jobs.2.headline' | translate }}</h3>
+        <p>· {{ 'sections.experience.jobs.2.bullets.0' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.2.bullets.1' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.2.bullets.2' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.2.bullets.3' | translate }}</p>
+        <p>· {{ 'sections.experience.jobs.2.bullets.4' | translate }}</p>
 
         <mat-divider></mat-divider>
 
-        <h3>
-          <strong>Freelance WordPress</strong> — Abr 2020 - Nov 2020
-        </h3>
-        <p>· Desarrollo de sitios web en WordPress, personalización de plantillas y configuración de plugins.
-        </p>
+        <h3>{{ 'sections.experience.jobs.3.headline' | translate }}</h3>
+        <p>· {{ 'sections.experience.jobs.3.bullets.0' | translate }}</p>
 
       </mat-card-content>
 
@@ -129,17 +108,13 @@
     <mat-card>
       <mat-card-title class="title-with-icon">
         <mat-icon>school</mat-icon>
-        Educación
+        {{ 'sections.education.title' | translate }}
       </mat-card-title>
 
       <mat-card-content>
 
-        <p>
-          <strong>Licenciada en Sistemas de Información</strong> - Universidad Nacional del Nordeste | 2014 - 2022
-        </p>
-        <p>
-          <strong>Analista Programadora Universitaria</strong> - Universidad Nacional del Nordeste | 2014 - 2020
-        </p>
+        <p>{{ 'sections.education.items.0' | translate }}</p>
+        <p>{{ 'sections.education.items.1' | translate }}</p>
 
       </mat-card-content>
 
@@ -148,17 +123,14 @@
     <mat-card>
       <mat-card-title class="title-with-icon">
         <mat-icon>build</mat-icon>
-        Habilidades técnicas
+        {{ 'sections.skills.title' | translate }}
       </mat-card-title>
       <mat-card-content>
-        <p><strong>Backend:</strong> C#, .NET Framework, .NET Core, Microservicios, NHibernate, Entity
-          Framework, APIs
-          REST/SOAP</p>
-        <p><strong>Frontend:</strong> Angular, AngularJS</p>
-        <p><strong>Bases de datos:</strong> SQL Server, Oracle (PL/SQL), PostgreSQL</p>
-        <p><strong>Herramientas:</strong> Git, GitHub, Bitbucket, Jira, Postman, Swagger, despligue continuo (CD/CD)
-          mediante Jenkins, uso de herramientas de IA (ChatGPT, Copilot)</p>
-        <p><strong>Mobile:</strong> Ionic, Capacitor, Android (Java)</p>
+        <p><strong>Backend:</strong> {{ 'sections.skills.backend' | translate }}</p>
+        <p><strong>Frontend:</strong> {{ 'sections.skills.frontend' | translate }}</p>
+        <p><strong>Bases de datos:</strong> {{ 'sections.skills.databases' | translate }}</p>
+        <p><strong>Herramientas:</strong> {{ 'sections.skills.tools' | translate }}</p>
+        <p><strong>Mobile:</strong> {{ 'sections.skills.mobile' | translate }}</p>
       </mat-card-content>
     </mat-card>
 
