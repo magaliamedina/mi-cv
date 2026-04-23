@@ -1,0 +1,91 @@
+{
+  "toolbar": {
+    "pdfButton": "📄 PDF",
+    "githubButton": "🐙 GitHub"
+  },
+  "profile": {
+    "name": "MAGALÍ MEDINA",
+    "role": "Desarrolladora de Software",
+    "summary": "Licenciada en Sistemas de Información con más de 4 años de experiencia en desarrollo y mantenimiento de software, especializada en tecnologías .NET, Angular y SQLServer."
+  },
+  "contact": {
+    "title": "Contacto",
+    "location": "📍 Corrientes, Argentina",
+    "email": "✉️ magalimedina96@gmail.com",
+    "github": "🌐 github.com/magaliamedina",
+    "phone": "📱 (+54) 3794861591",
+    "linkedin": "💼 linkedin.com/in/magali-anabel-medina"
+  },
+  "languages": {
+    "title": "Idiomas",
+    "items": [
+      "Español",
+      "Ingles: B1+"
+    ]
+  },
+  "sections": {
+    "experience": {
+      "title": "Experiencia laboral",
+      "jobs": [
+        {
+          "headline": "Wirsolut — Full Stack Developer (Remoto) - Sep 2022 - Feb 2026",
+          "bullets": [
+            "Desarrollo y mantenimiento de aplicaciones web utilizando C#, .NET Framework, .NET Core, Angular y AngularJS.",
+            "Desarrollo de soluciones móviles con Ionic/Android e integración con servicios web.",
+            "Implementación e integración de servicios mediante APIs REST y SOAP, documentación con Swagger.",
+            "Migración de servicios web desde .NET Framework a .NET Core 6/8/10.",
+            "Uso de NHibernate como ORM y gestión de datos con SQL Server y PostgreSQL.",
+            "Ejecución de code reviews y mejora de calidad del código.",
+            "Capacitación y acompañamiento de desarrolladores junior.",
+            "Análisis y asignación de tareas en Jira; coordinación de equipo.",
+            "Responsable de deployments a preproducción y producción con Jenkins ejecutando pipelines, revisión de ramas y resolución de incidentes.",
+            "Proyecto destacado: Liderazgo en el desarrollo de aplicación móvil Wirpost (Ionic) para el seguimiento de las cargas de los camiones y digitalización de las entregas (remitos)."
+          ]
+        },
+        {
+          "headline": "Sensei (Schejter y Schejter SA) — Desarrolladora (Corrientes, Argentina) May 2022 - Sep 2022",
+          "bullets": [
+            "Desarrollo y soporte de sistemas internos.",
+            "Consultas y mantenimiento de base de datos en SQL Server.",
+            "Análisis funcional y técnico de requerimientos."
+          ]
+        },
+        {
+          "headline": "Contaduría General de la Provincia de Corrientes — Desarrolladora Java - Pasante (Corrientes, Argentina) Jun 2021 - May 2022",
+          "bullets": [
+            "Desarrollo y mantenimiento de sistemas utilizando Java y PL/SQL (Oracle).",
+            "Diseño y análisis de modelos de datos (DER).",
+            "Creación de procedimientos almacenados y optimización de consultas SQL.",
+            "Uso de control de versiones con Subversion (SVN).",
+            "Desarrollo de módulos de tableros (dashboards) para visualización de información."
+          ]
+        },
+        {
+          "headline": "Freelance WordPress — Abr 2020 - Nov 2020",
+          "bullets": [
+            "Desarrollo de sitios web en WordPress, personalización de plantillas y configuración de plugins."
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Educación",
+      "items": [
+        "Licenciada en Sistemas de Información - Universidad Nacional del Nordeste | 2014 - 2022",
+        "Analista Programadora Universitaria - Universidad Nacional del Nordeste | 2014 - 2020"
+      ]
+    },
+    "skills": {
+      "title": "Habilidades técnicas",
+      "backend": "C#, .NET Framework, .NET Core, Microservicios, NHibernate, Entity Framework, APIs REST/SOAP, LINQ",
+      "frontend": "Angular, AngularJS, Typescript, HTML, CSS, Bootstrap, Material Design",
+      "databases": "SQL Server, Oracle (PL/SQL), PostgreSQL, Redis Cache",
+      "tools": "IA-driven (Copilot, Cursor, Gemini), Git, GitHub, Bitbucket, Jira, Postman, Swagger, CD/CD con Github Actions, pipelines mediante Jenkins, Docker",
+      "mobile": "Ionic, Capacitor, Android (Java)"
+    }
+  },
+  "links": {
+    "cvPdf": "assets/CV_Magali_Medina.pdf",
+    "githubProfile": "https://github.com/magaliamedina"
+  }
+}
