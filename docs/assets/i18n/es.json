@@ -80,7 +80,7 @@
       "backend": "C#, .NET Framework, .NET Core, Microservicios, NHibernate, Entity Framework, APIs REST/SOAP, LINQ",
       "frontend": "Angular, AngularJS, Typescript, HTML, CSS, Bootstrap, Material Design",
       "databases": "SQL Server, Oracle (PL/SQL), PostgreSQL, Redis Cache",
-      "tools": "IA-driven (Copilot, Cursor, Gemini), Git, GitHub, Bitbucket, Jira, Postman, Swagger, CD/CD con Github Actions, pipelines mediante Jenkins, Docker",
+      "tools": "IA-driven (Copilot - Cursor - Gemini), Git, GitHub, Bitbucket, Jira, Postman, Swagger, CD/CD con Github Actions, pipelines mediante Jenkins, Docker",
       "mobile": "Ionic, Capacitor, Android (Java)"
     }
   },
