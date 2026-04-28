@@ -77,11 +77,11 @@
     },
     "skills": {
       "title": "Habilidades técnicas",
-      "backend": "C#, .NET Framework, .NET Core, Microservicios, NHibernate, Entity Framework, APIs REST/SOAP, LINQ",
-      "frontend": "Angular, AngularJS, Typescript, HTML, CSS, Bootstrap, Material Design",
-      "databases": "SQL Server, Oracle (PL/SQL), PostgreSQL, Redis Cache",
-      "tools": "IA-driven (Copilot - Cursor - Gemini), Git, GitHub, Bitbucket, Jira, Postman, Swagger, CD/CD con Github Actions, pipelines mediante Jenkins, Docker",
-      "mobile": "Ionic, Capacitor, Android (Java)"
+      "backend": "C#, .NET Framework, .NET Core, Microservicios, NHibernate, Entity Framework, ASP.NET Core, APIs REST/SOAP, LINQ, Dapper, ADO.NET",
+      "frontend": "Angular, AngularJS, Typescript, HTML, CSS, Js, Bootstrap, Material Design",
+      "databases": "SQL Server, Oracle (PL/SQL), PostgreSQL, Redis Cache, MySQL",
+      "mobile": "Ionic, Capacitor, Android (Java)",
+      "tools": "IA-driven (Copilot - Cursor - Gemini), Git, GitHub, Bitbucket, Jira, Postman, Swagger, CD/CD con Github Actions, Pipelines mediante Jenkins, Docker"
     }
   },
   "links": {
