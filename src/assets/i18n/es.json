@@ -1,7 +1,7 @@
 {
   "toolbar": {
-    "pdfButton": "📄 PDF",
-    "githubButton": "🐙 GitHub"
+    "pdfButton": "PDF",
+    "githubButton": "GitHub"
   },
   "profile": {
     "name": "MAGALÍ MEDINA",
@@ -10,11 +10,11 @@
   },
   "contact": {
     "title": "Contacto",
-    "location": "📍 Corrientes, Argentina",
-    "email": "✉️ magalimedina96@gmail.com",
-    "github": "🌐 github.com/magaliamedina",
-    "phone": "📱 (+54) 3794861591",
-    "linkedin": "💼 linkedin.com/in/magali-anabel-medina"
+    "location": "Corrientes, Argentina",
+    "email": "magalimedina96@gmail.com",
+    "github": "github.com/magaliamedina",
+    "phone": "(+54) 3794861591",
+    "linkedin": "linkedin.com/in/magali-anabel-medina"
   },
   "languages": {
     "title": "Idiomas",

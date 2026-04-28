@@ -1,137 +1,180 @@
-<mat-toolbar>
+<div class="app-shell">
+  <mat-toolbar class="topbar">
+    <button mat-icon-button class="menu-button" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <span class="spacer"></span>
-
-  <button mat-button (click)="downloadCV()">{{ 'toolbar.pdfButton' | translate }}</button>
-
-  <button mat-button (click)="goToGithub()">{{ 'toolbar.githubButton' | translate }}</button>
-
-  <button mat-icon-button (click)="toggleTheme()">
-    <mat-icon>brightness_6</mat-icon>
-  </button>
-
-</mat-toolbar>
-
-<mat-sidenav-container>
-
-  <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="!isMobile" class="sidebar">
-
-    <div class="name-container">
-      <h1>{{ 'profile.name' | translate }}</h1>
-      <h2>{{ 'profile.role' | translate }}</h2>
+    <div class="brand">
+      <span class="brand-title">{{ 'profile.name' | translate }}</span>
+      <span class="brand-role">{{ 'profile.role' | translate }}</span>
     </div>
 
-    <mat-card>
+    <span class="spacer"></span>
 
-      <mat-card-content>
-        <p>{{ 'profile.summary' | translate }}</p>
-      </mat-card-content>
+    <div class="actions">
+      <button mat-stroked-button (click)="downloadCV()">
+        <mat-icon [style.color]="isDark ? '#f5f7ff' : null">description</mat-icon>
+        <span [style.color]="isDark ? '#f5f7ff' : null">{{ 'toolbar.pdfButton' | translate }}</span>
+      </button>
+      <button mat-flat-button (click)="goToGithub()">
+        <mat-icon>code</mat-icon>
+        {{ 'toolbar.githubButton' | translate }}
+      </button>
+      <button mat-icon-button (click)="toggleTheme()">
+        <mat-icon>brightness_6</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
 
-    </mat-card>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="!isMobile" class="sidebar">
+      <section class="profile-header">
+        <h1>{{ 'profile.name' | translate }}</h1>
+        <h2>{{ 'profile.role' | translate }}</h2>
+      </section>
 
-    <mat-divider></mat-divider>
+      <mat-card class="panel-card">
+        <mat-card-content>
+          <p>{{ 'profile.summary' | translate }}</p>
+        </mat-card-content>
+      </mat-card>
 
-    <mat-list>
+      <mat-card class="panel-card">
+        <mat-card-content>
+          <h3>{{ 'contact.title' | translate }}</h3>
+          <p class="contact-item">
+            <mat-icon>location_on</mat-icon>
+            <span>{{ 'contact.location' | translate }}</span>
+          </p>
+          <p class="contact-item">
+            <mat-icon>mail</mat-icon>
+            <span>{{ 'contact.email' | translate }}</span>
+          </p>
+          <p class="contact-item">
+            <mat-icon>code</mat-icon>
+            <span>{{ 'contact.github' | translate }}</span>
+          </p>
+          <p class="contact-item">
+            <mat-icon>call</mat-icon>
+            <span>{{ 'contact.phone' | translate }}</span>
+          </p>
+          <p class="contact-item">
+            <mat-icon>badge</mat-icon>
+            <span>{{ 'contact.linkedin' | translate }}</span>
+          </p>
+        </mat-card-content>
+      </mat-card>
 
-      <h3 mat-subheader>{{ 'contact.title' | translate }}</h3>
+      <mat-card class="panel-card">
+        <mat-card-content>
+          <h3>{{ 'languages.title' | translate }}</h3>
+          <mat-list>
+            <mat-list-item>
+              <span [style.color]="isDark ? '#f5f7ff' : null">{{ 'languages.items.0' | translate }}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <span [style.color]="isDark ? '#f5f7ff' : null">{{ 'languages.items.1' | translate }}</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </mat-sidenav>
 
-      <p>{{ 'contact.location' | translate }}</p>
-      <p>{{ 'contact.email' | translate }}</p>
-      <p>{{ 'contact.github' | translate }}</p>
-      <p>{{ 'contact.phone' | translate }}</p>
-      <p>{{ 'contact.linkedin' | translate }}</p>
+    <mat-sidenav-content class="content">
+      <mat-card class="content-card">
+        <mat-card-title class="title-with-icon">
+          <mat-icon>work</mat-icon>
+          {{ 'sections.experience.title' | translate }}
+        </mat-card-title>
 
-      <mat-divider></mat-divider>
+        <mat-card-content>
+          <section class="timeline-entry">
+            <h3>{{ 'sections.experience.jobs.0.headline' | translate }}</h3>
+            <p>· {{ 'sections.experience.jobs.0.bullets.0' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.1' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.2' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.3' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.4' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.5' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.6' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.7' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.0.bullets.8' | translate }}</p>
+            <p>{{ 'sections.experience.jobs.0.bullets.9' | translate }}</p>
+          </section>
 
-      <h3 mat-subheader>{{ 'languages.title' | translate }}</h3>
+          <section class="timeline-entry">
+            <h3>{{ 'sections.experience.jobs.1.headline' | translate }}</h3>
+            <p>· {{ 'sections.experience.jobs.1.bullets.0' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.1.bullets.1' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.1.bullets.2' | translate }}</p>
+          </section>
 
-      <mat-list-item>{{ 'languages.items.0' | translate }}</mat-list-item>
-      <mat-list-item>{{ 'languages.items.1' | translate }}</mat-list-item>
+          <section class="timeline-entry">
+            <h3>{{ 'sections.experience.jobs.2.headline' | translate }}</h3>
+            <p>· {{ 'sections.experience.jobs.2.bullets.0' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.2.bullets.1' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.2.bullets.2' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.2.bullets.3' | translate }}</p>
+            <p>· {{ 'sections.experience.jobs.2.bullets.4' | translate }}</p>
+          </section>
 
-    </mat-list>
+          <section class="timeline-entry">
+            <h3>{{ 'sections.experience.jobs.3.headline' | translate }}</h3>
+            <p>· {{ 'sections.experience.jobs.3.bullets.0' | translate }}</p>
+          </section>
+        </mat-card-content>
+      </mat-card>
 
-  </mat-sidenav>
+      <mat-card class="content-card">
+        <mat-card-title class="title-with-icon">
+          <mat-icon>school</mat-icon>
+          {{ 'sections.education.title' | translate }}
+        </mat-card-title>
 
-  <mat-sidenav-content class="content">
+        <mat-card-content>
+          <p>{{ 'sections.education.items.0' | translate }}</p>
+          <p>{{ 'sections.education.items.1' | translate }}</p>
+        </mat-card-content>
+      </mat-card>
 
-    <mat-card>
-      <mat-card-title class="title-with-icon">
-        <mat-icon>work</mat-icon>
-        {{ 'sections.experience.title' | translate }}
-      </mat-card-title>
-
-      <mat-card-content>
-
-        <h3>{{ 'sections.experience.jobs.0.headline' | translate }}</h3>
-        <p>· {{ 'sections.experience.jobs.0.bullets.0' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.1' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.2' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.3' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.4' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.5' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.6' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.7' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.0.bullets.8' | translate }}</p>
-        <p>{{ 'sections.experience.jobs.0.bullets.9' | translate }}</p>
-
-        <mat-divider></mat-divider>
-
-        <h3>{{ 'sections.experience.jobs.1.headline' | translate }}</h3>
-        <p>· {{ 'sections.experience.jobs.1.bullets.0' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.1.bullets.1' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.1.bullets.2' | translate }}</p>
-
-        <mat-divider></mat-divider>
-
-        <h3>{{ 'sections.experience.jobs.2.headline' | translate }}</h3>
-        <p>· {{ 'sections.experience.jobs.2.bullets.0' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.2.bullets.1' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.2.bullets.2' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.2.bullets.3' | translate }}</p>
-        <p>· {{ 'sections.experience.jobs.2.bullets.4' | translate }}</p>
-
-        <mat-divider></mat-divider>
-
-        <h3>{{ 'sections.experience.jobs.3.headline' | translate }}</h3>
-        <p>· {{ 'sections.experience.jobs.3.bullets.0' | translate }}</p>
-
-      </mat-card-content>
-
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title class="title-with-icon">
-        <mat-icon>school</mat-icon>
-        {{ 'sections.education.title' | translate }}
-      </mat-card-title>
-
-      <mat-card-content>
-
-        <p>{{ 'sections.education.items.0' | translate }}</p>
-        <p>{{ 'sections.education.items.1' | translate }}</p>
-
-      </mat-card-content>
-
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title class="title-with-icon">
-        <mat-icon>build</mat-icon>
-        {{ 'sections.skills.title' | translate }}
-      </mat-card-title>
-      <mat-card-content>
-        <p><strong>Backend:</strong> {{ 'sections.skills.backend' | translate }}</p>
-        <p><strong>Frontend:</strong> {{ 'sections.skills.frontend' | translate }}</p>
-        <p><strong>Bases de datos:</strong> {{ 'sections.skills.databases' | translate }}</p>
-        <p><strong>Herramientas:</strong> {{ 'sections.skills.tools' | translate }}</p>
-        <p><strong>Mobile:</strong> {{ 'sections.skills.mobile' | translate }}</p>
-      </mat-card-content>
-    </mat-card>
-
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
+      <mat-card class="content-card">
+        <mat-card-title class="title-with-icon">
+          <mat-icon>build</mat-icon>
+          {{ 'sections.skills.title' | translate }}
+        </mat-card-title>
+        <mat-card-content>
+          <div class="skill-group">
+            <p><strong>Backend:</strong></p>
+            <div class="chip-wrap">
+              <code class="tech-chip" *ngFor="let skill of getSkillItems('sections.skills.backend')">{{ skill }}</code>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p><strong>Frontend:</strong></p>
+            <div class="chip-wrap">
+              <code class="tech-chip" *ngFor="let skill of getSkillItems('sections.skills.frontend')">{{ skill }}</code>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p><strong>Bases de datos:</strong></p>
+            <div class="chip-wrap">
+              <code class="tech-chip" *ngFor="let skill of getSkillItems('sections.skills.databases')">{{ skill }}</code>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p><strong>Herramientas:</strong></p>
+            <div class="chip-wrap">
+              <code class="tech-chip" *ngFor="let skill of getSkillItems('sections.skills.tools')">{{ skill }}</code>
+            </div>
+          </div>
+          <div class="skill-group">
+            <p><strong>Mobile:</strong></p>
+            <div class="chip-wrap">
+              <code class="tech-chip" *ngFor="let skill of getSkillItems('sections.skills.mobile')">{{ skill }}</code>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

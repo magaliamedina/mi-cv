@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatToolbar } from "@angular/material/toolbar";
 import { MatIcon } from "@angular/material/icon";
@@ -12,6 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     MatToolbar,
     MatIcon,
     MatSidenavModule,
@@ -26,6 +28,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   isMobile = false;
   isTablet = false;
+  isDark = false;
 
   constructor(private breakpointObserver: BreakpointObserver, protected translate: TranslateService) {
     this.translate.setDefaultLang('es');
@@ -38,6 +41,29 @@ export class AppComponent {
       this.isMobile = result.matches;
 
     });
+
+}
+
+ngOnInit() {
+
+  const savedTheme = localStorage.getItem('theme');
+
+  // Si nunca se guardó tema → usar dark por defecto
+  if (!savedTheme || savedTheme === 'dark') {
+
+    this.isDark = true;
+    document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
+
+    localStorage.setItem('theme', 'dark');
+
+  } else {
+
+    this.isDark = false;
+    document.body.classList.add('light-theme');
+    document.body.classList.remove('dark-theme');
+
+  }
 
 }
 
@@ -56,11 +82,22 @@ export class AppComponent {
     if (body.classList.contains('dark-theme')) {
       body.classList.remove('dark-theme');
       body.classList.add('light-theme');
+      this.isDark = false;
     } else {
       body.classList.remove('light-theme');
       body.classList.add('dark-theme');
+      this.isDark = true;
     }
+  }
 
+  getSkillItems(path: string): string[] {
+    const rawText = this.translate.instant(path);
+    if (typeof rawText !== 'string') return [];
+
+    return rawText
+      .split(',')
+      .map(item => item.trim())
+      .filter(Boolean);
   }
 
 }

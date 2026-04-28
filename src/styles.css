@@ -1,127 +1,23 @@
-body {
-  font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
 
-/* ===== DARK THEME GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f7f9fc;
+  color: #1b1f28;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
 .dark-theme {
-
-  --bg: #121212;
-  --surface: #1e1e1e;
-  --text: #ffffff;
-
-  background-color: var(--bg);
-  color: var(--text);
-  
-}
-
-.dark-theme h1,
-.dark-theme h2,
-.dark-theme h3,
-.dark-theme p {
-
-  color: white !important;
-
-}
-
-/* BODY */
-
-.dark-theme body {
-  background-color: var(--bg);
-  color: var(--text);
-}
-
-/* SIDENAV CONTAINER */
-
-.dark-theme mat-sidenav-container {
-  background-color: var(--bg) !important;
-}
-
-/* CONTENT */
-
-.dark-theme mat-sidenav-content {
-  background-color: var(--bg) !important;
-}
-
-/* SIDEBAR */
-
-.dark-theme mat-sidenav {
-  background-color: var(--bg) !important;
-}
-
-/* CARDS */
-
-.dark-theme mat-card {
-  background-color: var(--surface) !important;
-  color: white !important;
-}
-
-/* TOOLBAR */
-
-.dark-theme mat-toolbar {
-  background-color: #1e1e1e !important;
-  color: white !important;
-}
-
-/* LIST ITEMS */
-
-.dark-theme .mat-mdc-list-item {
-  color: white !important;
-}
-
-/* SUBHEADERS */
-
-.dark-theme .mat-mdc-subheader {
-  color: #bbbbbb !important;
-}
-
-/* ===== FIX TEXTOS EN DARK MODE ===== */
-
-.dark-theme .mat-mdc-list-item {
-
-  color: white !important;
-
-}
-
-/* TEXTO REAL dentro del list item */
-
-.dark-theme .mdc-list-item__primary-text {
-
-  color: white !important;
-
-}
-
-/* SUBTÍTULOS (Contacto, Skills) */
-
-.dark-theme .mat-mdc-subheader {
-
-  color: #bbbbbb !important;
-
-}
-
-/* ===== BOTONES EN DARK MODE ===== */
-
-.dark-theme .mat-mdc-button {
-
-  color: white !important;
-
-}
-
-.dark-theme .mat-mdc-icon-button {
-
-  color: white !important;
-
-}
-
-.dark-theme .mat-mdc-unelevated-button {
-
-  color: white !important;
-
-}
-
-.dark-theme .mat-mdc-outlined-button {
-
-  color: white !important;
-
+  background: #11141b;
+  color: #f5f7ff;
 }
