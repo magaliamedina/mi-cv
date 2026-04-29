@@ -63,7 +63,8 @@
         {
           "headline": "Freelance WordPress — Abr 2020 - Nov 2020",
           "bullets": [
-            "Desarrollo de sitios web en WordPress, personalización de plantillas y configuración de plugins."
+            "Desarrollo de sitios web en WordPress, personalización de plantillas con PHP y configuración de plugins.",
+            "Subida de los sitios web a hosting web y manejo de la base de datos MySQL."
           ]
         }
       ]
@@ -77,7 +78,7 @@
     },
     "skills": {
       "title": "Habilidades técnicas",
-      "backend": "C#, .NET Framework, .NET Core, Microservicios, NHibernate, Entity Framework, ASP.NET Core, APIs REST/SOAP, LINQ, Dapper, ADO.NET",
+      "backend": "C#, .NET Framework, .NET Core, PHP, Microservicios, NHibernate, Entity Framework, ASP.NET Core, APIs REST/SOAP, LINQ, Dapper, ADO.NET",
       "frontend": "Angular, AngularJS, Typescript, HTML, CSS, Js, Bootstrap, Material Design",
       "databases": "SQL Server, Oracle (PL/SQL), PostgreSQL, Redis Cache, MySQL",
       "mobile": "Ionic, Capacitor, Android (Java)",

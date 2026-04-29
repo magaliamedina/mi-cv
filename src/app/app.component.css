@@ -280,6 +280,11 @@ mat-sidenav-container {
     flex-wrap: wrap;
   }
 
+  /* Fondo detrás del sidenav */
+  mat-sidenav {
+    background: var(--surface) !important;
+  }
+
   mat-sidenav-container {
     min-height: calc(100vh - 92px);
   }
@@ -287,6 +292,8 @@ mat-sidenav-container {
   .sidebar {
     width: min(88vw, 320px);
     padding: 16px 14px;
+    background: var(--surface) !important;
+    backdrop-filter: none;
   }
 
   .profile-header h1 {
