@@ -68,7 +68,7 @@ ngOnInit() {
 }
 
   downloadCV() {
-    window.open('assets/CV_Magali_Anabel_Medina.pdf', '_blank');
+    window.open('assets/CV_Magali_Medina.pdf', '_blank');
   }
 
   goToGithub() {
